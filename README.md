@@ -98,11 +98,9 @@ Sistem menggunakan pendekatan Retrieval-Augmented Generation (RAG) yang terdiri 
 
 ## Evaluasi
 ### Evaluasi Retrieval
-- Recall@5 dan Recall@10 menunjukkan performa tinggi
-- Sistem mampu menemukan gambar relevan secara konsisten
+Evaluasi dilakukan menggunakan metrik Recall@K untuk mengukur kemampuan sistem dalam menemukan gambar yang relevan terhadap query yang diberikan. Hasil evaluasi menunjukkan bahwa nilai Recall@5 dan Recall@10 cukup tinggi, menandakan bahwa sistem mampu menempatkan gambar yang relevan pada posisi teratas hasil pencarian. Hal ini membuktikan bahwa penggunaan CLIP sebagai ekstraktor fitur visual dan FAISS sebagai mesin pencari vektor bekerja secara efektif dalam menangkap kesamaan visual antar gambar.
 ### Evaluasi Generatif
-- Teks yang dihasilkan koheren dan informatif
-- Relevan dengan konteks visual gambar
+Pada tahap generatif, kualitas deskripsi teks dievaluasi berdasarkan tingkat koherensi, relevansi, dan kesesuaian dengan konten visual. Hasil menunjukkan bahwa teks yang dihasilkan oleh model Flan-T5 bersifat informatif, kontekstual, dan selaras dengan isi gambar. Hal ini menunjukkan bahwa integrasi hasil retrieval sebagai konteks mampu meningkatkan kualitas generasi teks dibandingkan pendekatan generatif tanpa retrieval.
 
 ## Hasil dan Pembahasan
 Model CLIP mampu menangkap kesamaan visual dan semantik dengan baik. Pendekatan RAG meningkatkan kualitas deskripsi dibanding metode generatif biasa. Sistem bekerja stabil pada berbagai jenis citra, namun performa menurun pada gambar dengan konteks visual yang sangat kompleks.
