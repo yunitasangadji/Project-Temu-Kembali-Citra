@@ -5,12 +5,36 @@
   Berbasis Citra Menggunakan CLIP dan Model Flan T5 Base pada flickr30k
 </p>
 
+<h2 align="center">Nama Kelompok</h2>
 
-# Nama Kelompok:
-1. Wulan Nuri Rahmawati                  - 202210370311315
-2. Yunita Sangadji                       - 202210370311332
-3. Nurlisa Safi                          - 202210370311337
-4. Annisaa Salsabila Shafiyyah Fitriyani - 202210370311352
+<table align="center">
+  <tr>
+    <th>No</th>
+    <th>Nama Lengkap</th>
+    <th>NIM</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Wulan Nuri Rahmawati</td>
+    <td>202210370311315</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Yunita Sangadji</td>
+    <td>202210370311332</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Nurlisa Safi</td>
+    <td>202210370311337</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Annisaa Salsabila Shafiyyah Fitriyani</td>
+    <td>202210370311352</td>
+  </tr>
+</table>
+
 
 ## 📑 Table of Contents
 1. [Deskripsi Project](#deskripsi-project)  
@@ -55,6 +79,7 @@ Dataset Flickr30k terdiri dari ±30.000 gambar, masing-masing disertai 5 deskrip
    - Image Retrieval
    - Image Captioning
    - Multimodal Learning
+     
 🔗 Dataset: https://www.kaggle.com/datasets/eeshawn/flickr30k
 
 ## Metodologi
@@ -68,6 +93,8 @@ Dataset Flickr30k terdiri dari ±30.000 gambar, masing-masing disertai 5 deskrip
 - Caption hasil retrieval dijadikan konteks
 - Flan-T5 menghasilkan deskripsi teks
 - Evaluasi menggunakan BLEU dan ROUGE
+  
+Sistem menggunakan pendekatan Retrieval-Augmented Generation (RAG) yang terdiri dari dua tahap utama. Pada tahap image retrieval, embedding visual diekstraksi menggunakan CLIP dan dinormalisasi dengan L2 normalization, kemudian dilakukan pencarian berbasis FAISS. Evaluasi tahap ini dilakukan menggunakan metrik Recall@K. Pada tahap generative, hasil retrieval digunakan sebagai konteks untuk menghasilkan deskripsi teks menggunakan model Flan-T5. Kualitas teks dievaluasi menggunakan metrik BLEU dan ROUGE untuk mengukur kesesuaian semantik dan kelancaran bahasa.
 
 ## Evaluasi
 ### Evaluasi Retrieval
@@ -87,3 +114,5 @@ Model CLIP mampu menangkap kesamaan visual dan semantik dengan baik. Pendekatan 
 
 ## Kesimpulan
 Sistem Image-Based Retrieval-Augmented Generation (RAG) berhasil dikembangkan dengan mengintegrasikan CLIP, FAISS, dan Flan-T5. Sistem ini mampu melakukan pencarian gambar secara efektif dan menghasilkan deskripsi teks yang informatif serta kontekstual. Pendekatan ini sangat potensial untuk aplikasi di bidang computer vision dan multimodal AI.
+
+Link Collab: https://colab.research.google.com/drive/1cS06fWKjaQoCqlrVmhwljmbh_q0I3R9c?usp=sharing#scrollTo=CmKNYr1ydd9f 
