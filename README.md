@@ -1,8 +1,20 @@
-# Project-Temu-Kembali-Citra
+<h1 align="center">Project - Temu Kembali Citra</h1>
+
+<p align="center">
+  Perancangan Sistem Retrieval-Augmented Generation (RAG)<br>
+  Berbasis Citra Menggunakan CLIP dan Model Flan T5 Base pada flickr30k
+</p>
+
+
+# Nama Kelompok:
+1. Wulan Nuri Rahmawati                  - 202210370311315
+2. Yunita Sangadji                       - 202210370311332
+3. Nurlisa Safi                          - 202210370311337
+4. Annisaa Salsabila Shafiyyah Fitriyani - 202210370311352
 
 ## 📑 Table of Contents
-1. [Deskripsi Proyek](#deskripsi-proyek)  
-2. [Tujuan Penelitian](#tujuan-penelitian)  
+1. [Deskripsi Project](#deskripsi-project)  
+2. [Tujuan ](#tujuan)  
 3. [Arsitektur Sistem](#arsitektur-sistem)  
 4. [Dataset](#dataset)  
    - [Flickr30k Dataset](#flickr30k-dataset)  
@@ -16,11 +28,11 @@
 8. [Analisis Waktu dan Penyimpanan](#analisis-waktu-dan-penyimpanan)  
 9. [Kesimpulan](#kesimpulan)  
 
-## Deskripsi Proyek
+## Deskripsi Project
 
 Proyek ini mengembangkan sistem Retrieval-Augmented Generation (RAG) berbasis citra dengan memanfaatkan CLIP (Contrastive Language–Image Pretraining) sebagai visual encoder dan Flan-T5 Base sebagai text generator. Sistem ini dirancang untuk melakukan pencarian gambar berbasis kemiripan visual sekaligus menghasilkan deskripsi teks yang relevan berdasarkan hasil retrieval.
 
-## Tujuan Penelitian
+## Tujuan 
 - Mengembangkan sistem RAG berbasis citra
 - Mengimplementasikan CLIP untuk ekstraksi fitur visual
 - Menggunakan FAISS untuk pencarian vektor secara efisien
@@ -46,22 +58,22 @@ Dataset Flickr30k terdiri dari ±30.000 gambar, masing-masing disertai 5 deskrip
 🔗 Dataset: https://www.kaggle.com/datasets/eeshawn/flickr30k
 
 ## Metodologi
-Image Retrieval
+### Image Retrieval
 - Ekstraksi embedding menggunakan CLIP
 - Normalisasi vektor (L2)
 - Pencarian berbasis FAISS
 - Evaluasi menggunakan Recall@K dan mAP
 
-Generative Stage
+### Generative Stage
 - Caption hasil retrieval dijadikan konteks
 - Flan-T5 menghasilkan deskripsi teks
 - Evaluasi menggunakan BLEU dan ROUGE
 
 ## Evaluasi
-Evaluasi Retrieval
+### Evaluasi Retrieval
 - Recall@5 dan Recall@10 menunjukkan performa tinggi
 - Sistem mampu menemukan gambar relevan secara konsisten
-Evaluasi Generatif
+### Evaluasi Generatif
 - Teks yang dihasilkan koheren dan informatif
 - Relevan dengan konteks visual gambar
 
